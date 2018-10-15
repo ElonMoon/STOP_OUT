@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School</title>
+</head>
+<body>
+    <ul>
+    {% for school in schools %}
+    <li><a href="{% url 'school-detail' pk=school.pk%}">{{ school.name }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
